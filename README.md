@@ -1,4 +1,4 @@
-# FZF Select zsh plugin
+# FZF select file zsh plugin
 
 A simple plugin to let you select some files on the command line with fzf and exa
 
@@ -7,13 +7,13 @@ A simple plugin to let you select some files on the command line with fzf and ex
 with [zplug](https://github.com/zplug/zplug)
 
 ```sh
-zplug 'chmouel/fzf-select'
+zplug 'chmouel/fzf-select-file'
 ```
 
 or whatever is your zsh plugin manager (ie: [vtplug](https://blog.chmouel.com/2022/03/18/vtplug-a-very-dumb-and-tiny-zsh-plugin-manager/))
 
 You can as well simply git clone this repository and source the
-`fzf-select.plugin.zsh` file if you want to do this just manually.
+`fzf-select-file.plugin.zsh` file if you want to do this just manually.
 
 ## Usage
 
@@ -30,14 +30,14 @@ https://user-images.githubusercontent.com/98980/211789984-5343295e-6680-4ea6-ba4
 
 You can customize some variables
 
-- `ZSH_FZF_SELECT_FZF_ARGS`: The arguments to fzf
-- `ZSH_FZF_SELECT_EXA_ARGS`: The arguments to exa
-- `ZSH_FZF_SELECT_BIND`: The keybinding to use default to "^x^f"
+- `ZSH_FZF_SELECT_FILE_FZF_ARGS`: The arguments to fzf
+- `ZSH_FZF_SELECT_FILE_EXA_ARGS`: The arguments to exa
+- `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
 
-If you want to show every files including the hidden one you can use the `fzf_select_all` widget like this:
+If you want to show every files including the hidden one you can use the `fzf_select_file_all` widget like this:
 
 ```bash
-bindkey "^x^a"  fzf_select_all # bind control-x control-a to show all files including hidden one
+bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files including hidden one
 ```
 
 ## Copyright
