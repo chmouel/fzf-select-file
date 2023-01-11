@@ -11,9 +11,17 @@
 __fzf_select() {
     local exa_extras=$@
     local choices=(${(f)"$(exa ${=exa_extras} ${=ZSH_FZF_SELECT_EXA_ARGS} .|fzf ${=ZSH_FZF_SELECT_FZF_ARGS})"})
+    local space=""
+    local goend=
     (( ${#choices} )) || return 1
-    BUFFER+=" ${(@q)${choices[@]/(#m)*/${${(As: :)MATCH}[7,-1]}}}"
-    zle end-of-line
+    [[ -n ${BUFFER} && *${BUFFER} != " " ]] && space=" "
+    if [[ -n ${BUFFER} ]];then
+        goend=1
+    else
+        space=" "
+    fi
+    BUFFER+="${space}${(@q)${choices[@]/(#m)*/${${(As: :)MATCH}[7,-1]}}}"
+    (( goend )) && zle end-of-line
     return 0
 }
 
