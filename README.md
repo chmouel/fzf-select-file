@@ -23,6 +23,9 @@ be added to the command line.
 
 ## Demo
 
+https://user-images.githubusercontent.com/98980/211789984-5343295e-6680-4ea6-ba4a-21c65eb63d62.mp4
+
+
 ## Configuration
 
 You can customize some variables
@@ -52,6 +55,10 @@ Chmouel Boudjnah
 - Fediverse - <[@chmouel@fosstodon.org](https://fosstodon.org/@chmouel)>
 - Twitter - <[@chmouel](https://twitter.com/chmouel)>
 - Blog  - <[https://blog.chmouel.com](https://blog.chmouel.com)>
+
+## Alternative
+
+You can as well use the [FZF ZSH Plugin](https://github.com/unixorn/fzf-zsh-plugin) to get *everything* selected with fzf in zsh but no pretty exa listing in there...
 
 ## Thanks
 
