@@ -36,7 +36,7 @@ You can customize some variables
 
 If you want to show every files including the hidden one you can use the `fzf_select_all` widget like this:
 
-```zsh
+```bash
 bindkey "^x^a"  fzf_select_all # bind control-x control-a to show all files including hidden one
 ```
 
