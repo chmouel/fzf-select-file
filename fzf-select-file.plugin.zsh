@@ -14,8 +14,8 @@ __fzf_select_file() {
     local space=""
     local goend=0
     (( ${#choices} )) || return 1
-    [[ -n ${BUFFER} && "$BUFFER" != *" " ]] && space=" "
     if [[ -n ${BUFFER} ]];then
+        [[ "$BUFFER" != *" " ]] && space=" "
         goend=1
     else
         space=" "
