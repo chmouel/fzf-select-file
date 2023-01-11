@@ -48,6 +48,10 @@ bindkey "^x^a"  fzf_select_all # bind control-x control-a to show all files incl
 
 - Symlinks are not selected properly
 
+## TODO
+
+- Add preview
+
 ## Authors
 
 Chmouel Boudjnah
