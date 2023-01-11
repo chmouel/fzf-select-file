@@ -12,7 +12,7 @@ __fzf_select_file() {
     local exa_extras=$@
     local choices=(${(f)"$(exa ${=exa_extras} ${=ZSH_FZF_SELECT_FILE_EXA_ARGS} .|fzf ${=ZSH_FZF_SELECT_FILE_FZF_ARGS})"})
     local space=""
-    local goend=
+    local goend=0
     (( ${#choices} )) || return 1
     [[ -n ${BUFFER} && "$BUFFER" != *" " ]] && space=" "
     if [[ -n ${BUFFER} ]];then
