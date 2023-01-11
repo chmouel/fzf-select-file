@@ -14,7 +14,7 @@ __fzf_select() {
     local space=""
     local goend=
     (( ${#choices} )) || return 1
-    [[ -n ${BUFFER} && *${BUFFER} != " " ]] && space=" "
+    [[ -n ${BUFFER} && "$BUFFER" != *" " ]] && space=" "
     if [[ -n ${BUFFER} ]];then
         goend=1
     else
