@@ -44,10 +44,6 @@ bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files
 
 [Apache-2.0](./LICENSE)
 
-## BUGS
-
-- Symlinks are not selected properly
-
 ## TODO
 
 - Add preview

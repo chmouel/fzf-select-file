@@ -20,7 +20,7 @@ __fzf_select_file() {
     else
         space=" "
     fi
-    BUFFER+="${space}${(@q)${choices[@]/(#m)*/${${(As: :)MATCH}[7,-1]}}}"
+    BUFFER+="${space}${(@q)${${choices[@]/(#m)*/${${(As: :)MATCH}[7,-1]}}}%% ->*}"
     (( goend )) && zle end-of-line
     return 0
 }
