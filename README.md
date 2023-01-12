@@ -51,9 +51,9 @@ bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files
 
 [Apache-2.0](./LICENSE)
 
-## TODO
+## Blog
 
-- Add preview
+* https://blog.chmouel.com/posts/selecting-files-in-zsh-with-fzf/
 
 ## Authors
 
