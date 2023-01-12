@@ -15,6 +15,14 @@ or whatever is your zsh plugin manager (ie: [vtplug](https://blog.chmouel.com/20
 You can as well simply git clone this repository and source the
 `fzf-select-file.plugin.zsh` file if you want to do this just manually.
 
+## Requirements
+
+You need to have those tools installed:
+
+* [fzf](https://github.com/junegunn/fzf)
+* [exa](https://the.exa.website/)
+* [bat](https://github.com/sharkdp/bat)
+
 ## Usage
 
 C-x C-f (or control-x followed by control-f) will launch a fzf with a listing
