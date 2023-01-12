@@ -31,8 +31,7 @@ be added to the command line.
 
 ## Demo
 
-https://user-images.githubusercontent.com/98980/211789984-5343295e-6680-4ea6-ba4a-21c65eb63d62.mp4
-
+https://user-images.githubusercontent.com/98980/212008664-d87d18c1-71c9-403f-9282-685002a54797.mp4
 
 ## Configuration
 
