@@ -4,8 +4,8 @@
 # do nothing if exa is not installed
 (( ! $+commands[exa] )) && return
 
-(( ! ${+ZSH_FZF_SELECT_FILE_FZF_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_ARGS='--ansi -1 --tac +s -m -x -e --preview-window=hidden'
-(( ! ${+ZSH_FZF_SELECT_FILE_EXA_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_EXA_ARGS='--color=always -l --sort=newest'
+(( ! ${+ZSH_FZF_SELECT_FILE_FZF_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_ARGS='--header-first --header-lines=1 --ansi -1 --reverse +s -m -x -e' 
+(( ! ${+ZSH_FZF_SELECT_FILE_EXA_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_EXA_ARGS='--git --header --long --color=always --sort=newest --icons --color-scale'
 (( ! ${+ZSH_FZF_SELECT_FILE_BIND} )) && typeset -g ZSH_FZF_SELECT_FILE_BIND='^x^f'
 
 __fzf_select_file() {
@@ -20,7 +20,7 @@ __fzf_select_file() {
     else
         space=" "
     fi
-    BUFFER+="${space}${(@q)${choices[@]/(#m)*/${${${(As: :)MATCH}[7,-1]}%% ->*}}}"
+    BUFFER+="${space}${(@q)${choices[@]/(#m)*/${${${(As: :)MATCH}[9,-1]}%% ->*}}}"
     (( goend )) && zle end-of-line
     return 0
 }
