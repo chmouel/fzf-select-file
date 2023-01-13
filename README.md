@@ -21,13 +21,16 @@ You need to have those tools installed:
 
 * [fzf](https://github.com/junegunn/fzf)
 * [exa](https://the.exa.website/)
-* [bat](https://github.com/sharkdp/bat)
+* [bat](https://github.com/sharkdp/bat) (for preview)
 
 ## Usage
 
 C-x C-f (or control-x followed by control-f) will launch a fzf with a listing
 from exa, you can select one or multiple file (Withe the tab keys) and it will
 be added to the command line.
+
+While in selection if you press `control-v` it will show a preview with bat for
+files or exa for dirs (may fail on unknown files to bat)
 
 ## Demo
 
@@ -40,6 +43,7 @@ You can customize some variables
 - `ZSH_FZF_SELECT_FILE_FZF_ARGS`: The arguments to fzf
 - `ZSH_FZF_SELECT_FILE_EXA_ARGS`: The arguments to exa
 - `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
+- `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default)
 
 If you want to show every files including the hidden one you can use the `fzf_select_file_all` widget like this:
 
