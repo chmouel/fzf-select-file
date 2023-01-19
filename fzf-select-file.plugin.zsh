@@ -7,7 +7,7 @@
 # do nothing if bat is not installed
 (( ! $+commands[bat] )) && return
 
-(( ! ${+ZSH_FZF_SELECT_FILE_FZF_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_ARGS='--tac --header-first --header-lines=1 --ansi -1 --reverse +s -m -x -e'
+(( ! ${+ZSH_FZF_SELECT_FILE_FZF_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_ARGS='--tac --header-first --height=10 --header-lines=1 --ansi -1 --reverse +s -m -x -e'
 (( ! ${+ZSH_FZF_SELECT_FILE_EXA_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_EXA_ARGS='--header --long --color=always --sort=newest --icons --color-scale --no-permissions --no-filesize --no-user'
 (( ! ${+ZSH_FZF_SELECT_FILE_BIND} )) && typeset -g ZSH_FZF_SELECT_FILE_BIND='^x^f'
 (( ! ${+ZSH_FZF_SELECT_FILE_FZF_PREVIEW} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_PREVIEW='if [[ -d {-1} ]];then exa --level 2 --tree --color=always --group-directories-first {-1};elif [[ -f {-1} ]];then bat --color=always {-1};fi'
