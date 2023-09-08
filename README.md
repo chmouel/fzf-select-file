@@ -19,9 +19,9 @@ You can as well simply git clone this repository and source the
 
 You need to have those tools installed:
 
-* [fzf](https://github.com/junegunn/fzf)
-* [exa](https://the.exa.website/)
-* [bat](https://github.com/sharkdp/bat) (for preview)
+- [fzf](https://github.com/junegunn/fzf)
+- [eza](https://github.com/eza-community/eza) or [exa](the.exa.website) (for listing)
+- [bat](https://github.com/sharkdp/bat) (for preview)
 
 ## Usage
 
@@ -57,7 +57,7 @@ bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files
 
 ## Blog
 
-* https://blog.chmouel.com/posts/selecting-files-in-zsh-with-fzf/
+- https://blog.chmouel.com/posts/selecting-files-in-zsh-with-fzf/
 
 ## Authors
 
@@ -65,11 +65,11 @@ Chmouel Boudjnah
 
 - Fediverse - <[@chmouel@fosstodon.org](https://fosstodon.org/@chmouel)>
 - Twitter - <[@chmouel](https://twitter.com/chmouel)>
-- Blog  - <[https://blog.chmouel.com](https://blog.chmouel.com)>
+- Blog - <[https://blog.chmouel.com](https://blog.chmouel.com)>
 
 ## Alternative
 
-You can as well use the [FZF ZSH Plugin](https://github.com/unixorn/fzf-zsh-plugin) to get *everything* selected with fzf in zsh but no pretty exa listing in there...
+You can as well use the [FZF ZSH Plugin](https://github.com/unixorn/fzf-zsh-plugin) to get _everything_ selected with fzf in zsh but no pretty exa listing in there...
 
 ## Thanks
 
