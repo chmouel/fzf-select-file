@@ -1,16 +1,17 @@
 # FZF select file zsh plugin
 
-A simple plugin to let you select some files on the command line with fzf and exa
+A simple plugin to let you select some files on the command line with fzf and [eza](https://github.com/eza-community/eza)
 
 ## Install
 
-with [zplug](https://github.com/zplug/zplug)
+Using [zplug](https://github.com/zplug/zplug)
 
 ```sh
 zplug 'chmouel/fzf-select-file'
 ```
 
-or whatever is your zsh plugin manager (ie: [vtplug](https://blog.chmouel.com/2022/03/18/vtplug-a-very-dumb-and-tiny-zsh-plugin-manager/))
+Or any ZSH plugin manager (I use this own made one
+[vtplug](https://blog.chmouel.com/2022/03/18/vtplug-a-very-dumb-and-tiny-zsh-plugin-manager/))
 
 You can as well simply git clone this repository and source the
 `fzf-select-file.plugin.zsh` file if you want to do this just manually.
@@ -19,8 +20,8 @@ You can as well simply git clone this repository and source the
 
 You need to have those tools installed:
 
-- [fzf](https://github.com/junegunn/fzf)
-- [eza](https://github.com/eza-community/eza) or [exa](the.exa.website) (for listing)
+- [fzf](https://github.com/junegunn/fzf) (for selection)
+- [eza](https://github.com/eza-community/eza) (for listing)
 - [bat](https://github.com/sharkdp/bat) (for preview)
 
 ## Usage
@@ -41,7 +42,7 @@ files or eza for directories (may fail on unknown files to bat)
 You can customize some variables
 
 - `ZSH_FZF_SELECT_FILE_FZF_ARGS`: The arguments to fzf
-- `ZSH_FZF_SELECT_FILE_EXA_ARGS`: The arguments to exa
+- `ZSH_FZF_SELECT_FILE_EZA_ARGS`: The arguments to eza
 - `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
 - `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default)
 
