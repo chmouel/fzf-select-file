@@ -26,15 +26,15 @@ You need to have those tools installed:
 ## Usage
 
 C-x C-f (or control-x followed by control-f) will launch a fzf with a listing
-from exa, you can select one or multiple file (Withe the tab keys) and it will
+from eza, you can select one or multiple file (Withe the tab keys) and it will
 be added to the command line.
 
 While in selection if you press `control-v` it will show a preview with bat for
-files or exa for dirs (may fail on unknown files to bat)
+files or eza for directories (may fail on unknown files to bat)
 
 ## Demo
 
-https://user-images.githubusercontent.com/98980/212008664-d87d18c1-71c9-403f-9282-685002a54797.mp4
+<https://user-images.githubusercontent.com/98980/212008664-d87d18c1-71c9-403f-9282-685002a54797.mp4>
 
 ## Configuration
 
@@ -45,9 +45,10 @@ You can customize some variables
 - `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
 - `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default)
 
-If you want to show every files including the hidden one you can use the `fzf_select_file_all` widget like this:
+If you want to show every files including the hidden one you can use the
+`fzf_select_file_all` widget like this:
 
-```bash
+```sh
 bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files including hidden one
 ```
 
@@ -57,7 +58,7 @@ bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files
 
 ## Blog
 
-- https://blog.chmouel.com/posts/selecting-files-in-zsh-with-fzf/
+- <https://blog.chmouel.com/posts/selecting-files-in-zsh-with-fzf/>
 
 ## Authors
 
@@ -69,7 +70,9 @@ Chmouel Boudjnah
 
 ## Alternative
 
-You can as well use the [FZF ZSH Plugin](https://github.com/unixorn/fzf-zsh-plugin) to get _everything_ selected with fzf in zsh but no pretty exa listing in there...
+You can as well use the [FZF ZSH
+Plugin](https://github.com/unixorn/fzf-zsh-plugin) to get _everything_ selected
+with fzf in zsh but no pretty eza listing in there...
 
 ## Thanks
 
