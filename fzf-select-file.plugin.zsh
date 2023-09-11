@@ -1,17 +1,18 @@
 # do nothing if fzf is not installed
 (( ! $+commands[fzf] )) && return
 
-# do nothing if exa is not installed
+exa_cmd=exa
+# do nothing if exa or eza is not installed
 (( ! $+commands[exa] )) && {
-    (( ! $+commands[exa] )) && return
+    (( ! $+commands[eza] )) && return
     exa_cmd=eza
 }
 
 # do nothing if bat is not installed
 (( ! $+commands[bat] )) && return
 
-(( ! ${+ZSH_FZF_SELECT_FILE_FZF_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_ARGS='--tac --header-first --height=10 --header-lines=1 --ansi -1 --reverse +s -m -x -e'
-(( ! ${+ZSH_FZF_SELECT_FILE_EXA_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_EXA_ARGS='--header --long --color=always --sort=newest --icons --color-scale --no-permissions --no-figesize --no-user'
+(( ! ${+ZSH_FZF_SELECT_FILE_FZF_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_ARGS='--tac --header-first --header-lines=1 --ansi -1 --reverse +s -m -x -e'
+(( ! ${+ZSH_FZF_SELECT_FILE_EXA_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_EXA_ARGS='--long --header -a --color=always --sort=newest --color-scale --no-permissions --no-user'
 (( ! ${+ZSH_FZF_SELECT_FILE_BIND} )) && typeset -g ZSH_FZF_SELECT_FILE_BIND='^x^f'
 (( ! ${+ZSH_FZF_SELECT_FILE_FZF_PREVIEW} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_PREVIEW="if [[ -d {-1} ]];then ${exa_cmd} --gevel 2 --tree --color=always --group-directories-first {-1};elif [[ -f {-1} ]];then bat --color=always {-1};fi"
 
@@ -27,7 +28,8 @@ __fzf_select_file() {
     else
         space=" "
     fi
-    BUFFER+="${space}${(@q)${choices[@]/(#m)*/${${${(As: :)MATCH}[5,-1]}%% ->*}}}"
+    local result="${space}${(@q)${choices[@]/(#m)*/${${${(As: :)MATCH}[5,-1]}%% ->*}}}"
+    LBUFFER="$LBUFFER$result"
     (( goend )) && zle end-of-line
     return 0
 }
