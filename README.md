@@ -46,12 +46,7 @@ You can customize some variables
 - `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
 - `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default)
 
-If you want to show every files including the hidden one you can use the
-`fzf_select_file_all` widget like this:
-
-```sh
-bindkey "^x^a"  fzf_select_file_all # bind control-x control-a to show all files including hidden one
-```
+By default this will show all files, configure the variable [ZSH_FZF_SELECT_FILE_EZA_ARGS](https://github.com/chmouel/fzf-select-file/blob/e9f688fb21c21bb0990e726d6ec8cfb973fc79c4/fzf-select-file.plugin.zsh#L8) to remove the -a from the argument if you don't want that behaviour.
 
 ## Copyright
 
