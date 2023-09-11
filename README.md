@@ -35,7 +35,7 @@ files or eza for directories (may fail on unknown files to bat)
 
 ## Demo
 
-<https://user-images.githubusercontent.com/98980/212008664-d87d18c1-71c9-403f-9282-685002a54797.mp4>
+https://github.com/chmouel/fzf-select-file/assets/98980/438c5e77-b6da-45b1-b5ed-e8eb61a93fa5
 
 ## Configuration
 
