@@ -30,8 +30,9 @@ C-x C-f (or control-x followed by control-f) will launch a fzf with a listing
 from eza, you can select one or multiple file (Withe the tab keys) and it will
 be added to the command line.
 
-While in selection if you press `control-v` it will show a preview with bat for
-files or eza for directories (may fail on unknown files to bat)
+While in selection it will show a preview with bat for
+files or eza for directories (may fail on unknown files to bat) press
+`control-v` to hide the preview.
 
 ## Demo
 

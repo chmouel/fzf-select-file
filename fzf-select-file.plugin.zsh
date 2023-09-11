@@ -10,7 +10,7 @@
 (( ! ${+ZSH_FZF_SELECT_FILE_FZF_PREVIEW} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_PREVIEW="if [[ -d {-1} ]];then eza --level 2 --tree --color=always --group-directories-first {-1};elif [[ -f {-1} ]];then bat --color=always {-1};fi"
 
 _fzf_select_file() {
-    local choices=(${(f)"$(eza ${=ZSH_FZF_SELECT_FILE_EZA_ARGS} .|fzf --bind="ctrl-v:change-preview-window(nohidden)" --preview="${ZSH_FZF_SELECT_FILE_FZF_PREVIEW}" ${=ZSH_FZF_SELECT_FILE_FZF_ARGS})"})
+    local choices=(${(f)"$(eza ${=ZSH_FZF_SELECT_FILE_EZA_ARGS} .|fzf --bind="ctrl-v:change-preview-window(hidden)" --preview="${ZSH_FZF_SELECT_FILE_FZF_PREVIEW}" ${=ZSH_FZF_SELECT_FILE_FZF_ARGS})"})
     local result="${space}${(@q)${choices[@]/(#m)*/${${${(As: :)MATCH}[5,-1]}%% ->*}}}"
     (( ${#result} == 0 )) && return 1
     LBUFFER="$LBUFFER$result"
