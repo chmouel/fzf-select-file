@@ -26,9 +26,14 @@ You need to have those tools installed:
 
 ## Usage
 
-C-x C-f (or control-x followed by control-f) will launch a fzf with a listing
-from eza, you can select one or multiple file (Withe the tab keys) and it will
-be added to the command line.
+C-x C-f (or control-x followed by control-f) will launch fzf with a listing
+from eza, you can select one or multiple files (with the tab keys) and it will
+be added to the command line. If you have a word on the command line it will be
+used as the initial query for fzf and replaced with the results.
+
+By default it will show the files without the 'hidden' files (the ones starting
+with a dot) if you want to include them you can use the C-x C-a (or control-x
+followed by control-a) keybinding to show them.
 
 While in selection it will show a preview with bat for
 files or eza for directories (may fail on unknown files to bat) press
@@ -45,9 +50,8 @@ You can customize some variables
 - `ZSH_FZF_SELECT_FILE_FZF_ARGS`: The arguments to fzf
 - `ZSH_FZF_SELECT_FILE_EZA_ARGS`: The arguments to eza
 - `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
+- `ZSH_FZF_SELECT_ALL_FILES_BIND`: The keybinding to use default when selecting all files including the dot files, default to "^x^a"
 - `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default)
-
-By default this will show all files, configure the variable [ZSH_FZF_SELECT_FILE_EZA_ARGS](https://github.com/chmouel/fzf-select-file/blob/e9f688fb21c21bb0990e726d6ec8cfb973fc79c4/fzf-select-file.plugin.zsh#L8) to remove the -a from the argument if you don't want that behaviour.
 
 ## Copyright
 
