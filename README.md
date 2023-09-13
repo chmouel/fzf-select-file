@@ -75,6 +75,14 @@ You can as well use the [FZF ZSH
 Plugin](https://github.com/unixorn/fzf-zsh-plugin) to get _everything_ selected
 with fzf in zsh but no pretty eza listing in there...
 
+Or you can use a small zsh function like so
+```sh
+f() {
+    "$@" "$(fzf)"
+}
+```
+To select the arguments of a command via this function do `f command`. E.g. `f du -sh`
+
 ## Thanks
 
 - Inspired by this great plug-in <https://github.com/joshskidmore/zsh-fzf-history-search>
