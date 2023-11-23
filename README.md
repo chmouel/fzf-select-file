@@ -41,17 +41,19 @@ files or eza for directories (may fail on unknown files to bat) press
 
 ## Demo
 
-https://github.com/chmouel/fzf-select-file/assets/98980/438c5e77-b6da-45b1-b5ed-e8eb61a93fa5
+<https://github.com/chmouel/fzf-select-file/assets/98980/438c5e77-b6da-45b1-b5ed-e8eb61a93fa5>
 
 ## Configuration
 
 You can customize some variables
 
-- `ZSH_FZF_SELECT_FILE_FZF_ARGS`: The arguments to fzf
-- `ZSH_FZF_SELECT_FILE_EZA_ARGS`: The arguments to eza
-- `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f"
-- `ZSH_FZF_SELECT_ALL_FILES_BIND`: The keybinding to use default when selecting all files including the dot files, default to "^x^a"
-- `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default)
+- `ZSH_FZF_SELECT_FILE_FZF_ARGS`: The arguments to fzf.
+- `ZSH_FZF_SELECT_FILE_EZA_BINARY`: The binary to use for eza, default to `eza`.
+- `ZSH_FZF_SELECT_FILE_EZA_COLORS`: The eza colors to use default to `da=00`.
+- `ZSH_FZF_SELECT_FILE_EZA_ARGS`: The arguments to eza.
+- `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f".
+- `ZSH_FZF_SELECT_ALL_FILES_BIND`: The keybinding to use default when selecting all files including the dot files, default to "^x^a".
+- `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default).
 
 ## Copyright
 
