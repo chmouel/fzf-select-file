@@ -9,7 +9,7 @@
 (( ! ${+ZSH_FZF_SELECT_FILE_EZA_COLORS} )) && typeset -g ZSH_FZF_SELECT_FILE_EZA_COLORS="da=00"
 (( ! ${+ZSH_FZF_SELECT_FILE_EZA_ARGS} )) && typeset -g ZSH_FZF_SELECT_FILE_EZA_ARGS='--no-git -l --no-user --no-permissions --no-filesize --time-style=+%Y/%m/%d-%H:%M --icons=always --color=always'
 (( ! ${+ZSH_FZF_SELECT_FILE_BIND} )) && typeset -g ZSH_FZF_SELECT_FILE_BIND='^x^f'
-(( ! ${+ZSH_FZF_SELECT_ALL_FILES_BIND} )) && typeset -g ZSH_FZF_SELECT_FILE_BIND='^x^a'
+(( ! ${+ZSH_FZF_SELECT_ALL_FILES_BIND} )) && typeset -g ZSH_FZF_SELECT_ALL_FILES_BIND='^x^a'
 (( ! ${+ZSH_FZF_SELECT_FILE_FZF_PREVIEW} )) && typeset -g ZSH_FZF_SELECT_FILE_FZF_PREVIEW="if [[ -d {-1} ]];then eza --level 2 --tree --color=always --group-directories-first {-1};elif [[ -f {-1} ]];then bat --color=always {-1};fi"
 
 __fzf_select_file() {
@@ -41,5 +41,5 @@ autoload -U _fzf_select_file _fzf_select_file_all __fzf_select_file
 zle -N _fzf_select_file
 zle -N _fzf_select_file_all
 
-bindkey $ZSH_FZF_SELECT_FILE_BIND _fzf_select_file
-bindkey $ZSH_FZF_SELECT_ALL_FILES_BIND _fzf_select_file_all
+[[ -n ${ZSH_FZF_SELECT_FILE_BIND} ]] && bindkey $ZSH_FZF_SELECT_FILE_BIND _fzf_select_file
+[[ -n ${ZSH_FZF_SELECT_ALL_FILES_BIND} ]] && bindkey $ZSH_FZF_SELECT_ALL_FILES_BIND _fzf_select_file_all
