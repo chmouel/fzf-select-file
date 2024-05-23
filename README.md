@@ -52,8 +52,17 @@ You can customize some variables
 - `ZSH_FZF_SELECT_FILE_EZA_COLORS`: The eza colors to use default to `da=00`.
 - `ZSH_FZF_SELECT_FILE_EZA_ARGS`: The arguments to eza.
 - `ZSH_FZF_SELECT_FILE_BIND`: The keybinding to use default to "^x^f".
-- `ZSH_FZF_SELECT_ALL_FILES_BIND`: The keybinding to use default when selecting all files including the dot files, default to "^x^a".
+- `ZSH_FZF_SELECT_ALL_FILES_BIND`: The keybinding to use default when selecting
+  all files including the dot files, default to `^x^a`.
 - `ZSH_FZF_SELECT_FILE_FZF_PREVIEW`: The preview shell command (see source for default).
+
+## TIPS
+
+If you want to make Control-x Control-f select all you just need to set this in your config file before loading the plugin:
+
+```zsh
+ZSH_FZF_SELECT_ALL_FILES_BIND="^x^f"
+```
 
 ## Copyright
 
